@@ -1,35 +1,28 @@
 //
-//  GalleryDataSource.swift
-//  myPart
+//  FavoriteDataSource.swift
+//  GalleryProject
 //
-//  Created by Shotiko Klibadze on 06.07.21.
+//  Created by Zura Kobakhidze on 06.07.21.
 //
 
 import UIKit
 
-class GalleryDataSource: NSObject, UITableViewDataSource {
+class FavoriteDataSource: NSObject, UITableViewDataSource {
 
     
     private var tableView: UITableView!
-    private var viewModel: GalleryViewModelProtocol!
+    private var viewModel: FavoriteViewModelProtocol!
     
     
     private var content = [UIImage]()
     
-    init(with tableView : UITableView, viewModel: GalleryViewModelProtocol) {
+    init(with tableView : UITableView, viewModel: FavoriteViewModelProtocol) {
         self.tableView = tableView
         self.viewModel = viewModel
         
         super.init()
         
         self.tableView.dataSource = self
-    }
-    
-    func addImage(with image: UIImage){
-        content.append(image)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
     }
     
     func refresh(){
@@ -50,7 +43,7 @@ class GalleryDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.deque(GalleryCell.self, for: indexPath)
+        let cell = tableView.deque(FavoriteCell.self, for: indexPath)
         
         cell.configure(image: content[indexPath.row])
         

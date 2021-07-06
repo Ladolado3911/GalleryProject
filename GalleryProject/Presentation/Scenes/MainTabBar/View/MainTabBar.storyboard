@@ -17,6 +17,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="2Py-ij-mBk" kind="relationship" relationship="viewControllers" id="5u6-mI-6Tb"/>
+                        <segue destination="rou-rm-mla" kind="relationship" relationship="viewControllers" id="kf2-dO-CKJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20K-fD-evx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,12 +27,22 @@
         <!--GalleryViewController-->
         <scene sceneID="OuN-Ax-CCk">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="GalleryViewController" storyboardName="GalleryViewController" id="2Py-ij-mBk" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="GalleryNav" storyboardName="GalleryViewController" id="2Py-ij-mBk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5va-zf-3UD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nc9-8u-rHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="776" y="-152"/>
+        </scene>
+        <!--FavouriteViewController-->
+        <scene sceneID="hQQ-1V-ldD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FavoriteNav" storyboardName="FavouriteViewController" id="rou-rm-mla" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fw1-8o-SeV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAd-JQ-vjw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="2"/>
         </scene>
     </scenes>
 </document>

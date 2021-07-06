@@ -30,6 +30,12 @@
 		F168F2D32694865500FE7380 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F168F2D22694865500FE7380 /* Kingfisher */; };
 		F168F2DC26948AD400FE7380 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168F2DA26948AD400FE7380 /* GalleryCell.swift */; };
 		F168F2DD26948AD400FE7380 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F168F2DB26948AD400FE7380 /* GalleryCell.xib */; };
+		F168F2E22694938000FE7380 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168F2E12694938000FE7380 /* FavouriteViewController.swift */; };
+		F168F2E42694938800FE7380 /* FavouriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F168F2E32694938800FE7380 /* FavouriteViewController.storyboard */; };
+		F168F2E8269493C200FE7380 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168F2E6269493C200FE7380 /* FavoriteCell.swift */; };
+		F168F2E9269493C200FE7380 /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F168F2E7269493C200FE7380 /* FavoriteCell.xib */; };
+		F168F2EB2694947800FE7380 /* FavoriteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168F2EA2694947800FE7380 /* FavoriteDataSource.swift */; };
+		F168F2ED269494E000FE7380 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F168F2EC269494E000FE7380 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,12 @@
 		F168F2CF2694813D00FE7380 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		F168F2DA26948AD400FE7380 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		F168F2DB26948AD400FE7380 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
+		F168F2E12694938000FE7380 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		F168F2E32694938800FE7380 /* FavouriteViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteViewController.storyboard; sourceTree = "<group>"; };
+		F168F2E6269493C200FE7380 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		F168F2E7269493C200FE7380 /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
+		F168F2EA2694947800FE7380 /* FavoriteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDataSource.swift; sourceTree = "<group>"; };
+		F168F2EC269494E000FE7380 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,7 @@
 		24A0AA5226945DBA0081EDBE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F168F2DE2694930100FE7380 /* Favorite */,
 				F100C5EE2694650F00B153B3 /* MainTabBar */,
 				F100C5E5269463E200B153B3 /* Base */,
 				092259F2269474E3004469F4 /* Gallery */,
@@ -245,6 +258,43 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F168F2DE2694930100FE7380 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				F168F2E02694933800FE7380 /* View */,
+				F168F2DF2694933200FE7380 /* ViewModel */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		F168F2DF2694933200FE7380 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F168F2EA2694947800FE7380 /* FavoriteDataSource.swift */,
+				F168F2EC269494E000FE7380 /* FavoriteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F168F2E02694933800FE7380 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F168F2E5269493A400FE7380 /* FavoriteCell */,
+				F168F2E12694938000FE7380 /* FavouriteViewController.swift */,
+				F168F2E32694938800FE7380 /* FavouriteViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F168F2E5269493A400FE7380 /* FavoriteCell */ = {
+			isa = PBXGroup;
+			children = (
+				F168F2E6269493C200FE7380 /* FavoriteCell.swift */,
+				F168F2E7269493C200FE7380 /* FavoriteCell.xib */,
+			);
+			path = FavoriteCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,10 +359,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F168F2DD26948AD400FE7380 /* GalleryCell.xib in Resources */,
+				F168F2E42694938800FE7380 /* FavouriteViewController.storyboard in Resources */,
 				092259F9269474E3004469F4 /* GalleryViewController.storyboard in Resources */,
 				24A0AA492694595C0081EDBE /* LaunchScreen.storyboard in Resources */,
 				F100C5F02694652D00B153B3 /* MainTabBar.storyboard in Resources */,
 				24A0AA462694595C0081EDBE /* Assets.xcassets in Resources */,
+				F168F2E9269493C200FE7380 /* FavoriteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,8 +377,11 @@
 			files = (
 				092259FB269474E3004469F4 /* GalleryViewController.swift in Sources */,
 				F168F2CC2694808500FE7380 /* TableViewCell+Extension.swift in Sources */,
+				F168F2EB2694947800FE7380 /* FavoriteDataSource.swift in Sources */,
 				F100C5F2269465B100B153B3 /* MainTabBar.swift in Sources */,
 				F168F2CB2694808500FE7380 /* CollectionViewCell+Extension.swift in Sources */,
+				F168F2E22694938000FE7380 /* FavouriteViewController.swift in Sources */,
+				F168F2ED269494E000FE7380 /* FavoriteViewModel.swift in Sources */,
 				24A0AA3D2694595A0081EDBE /* AppDelegate.swift in Sources */,
 				F100C5E92694640200B153B3 /* Storyboarded.swift in Sources */,
 				24A0AA3F2694595A0081EDBE /* SceneDelegate.swift in Sources */,
@@ -337,6 +392,7 @@
 				F168F2CA2694808500FE7380 /* TableView+Extension.swift in Sources */,
 				F100C5ED2694647300B153B3 /* BaseViewController.swift in Sources */,
 				F168F2DC26948AD400FE7380 /* GalleryCell.swift in Sources */,
+				F168F2E8269493C200FE7380 /* FavoriteCell.swift in Sources */,
 				F100C5EA2694640200B153B3 /* CoordinatorDelegate.swift in Sources */,
 				F100C5EB2694640200B153B3 /* AppCoordinator.swift in Sources */,
 				092259F8269474E3004469F4 /* GalleryDataSource.swift in Sources */,

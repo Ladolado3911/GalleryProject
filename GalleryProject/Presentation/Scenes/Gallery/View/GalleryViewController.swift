@@ -23,6 +23,7 @@ class GalleryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pickImage))
         setupLayout()
         configureViewModel()
     }
@@ -36,7 +37,25 @@ class GalleryViewController: BaseViewController {
         dataSource = GalleryDataSource(with: tableView, viewModel: viewModel)
     }
     
+    @objc func pickImage() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc,animated: true)
+      }
+
+}
 
 
+extension GalleryViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+        dataSource.addImage(with: image)
+        
+      }
+      picker.dismiss(animated: true, completion: nil)
+    }
 
 }
