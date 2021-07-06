@@ -53,8 +53,19 @@ extension GalleryViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
         dataSource.addImage(with: image)
-        
+        let documentDir = try? FileManager.default.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+        guard let filePath = documentDir?.appendingPathComponent("GalleryImages") else {return}
+        guard let data = image.jpegData(compressionQuality: 1) else {return}
+        do {
+            try data.write(to: filePath)
+            print(filePath)
+        } catch {
+            print (error.localizedDescription)
+        }
       }
+        
+        
+    
       picker.dismiss(animated: true, completion: nil)
     }
 

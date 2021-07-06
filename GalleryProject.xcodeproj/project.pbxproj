@@ -10,6 +10,8 @@
 		092259F8269474E3004469F4 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092259F4269474E3004469F4 /* GalleryDataSource.swift */; };
 		092259F9269474E3004469F4 /* GalleryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092259F5269474E3004469F4 /* GalleryViewController.storyboard */; };
 		092259FB269474E3004469F4 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092259F7269474E3004469F4 /* GalleryViewController.swift */; };
+		092259FF26949DEB004469F4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092259FD26949DEB004469F4 /* CameraViewController.swift */; };
+		09225A0226949E0C004469F4 /* CameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09225A0126949E0C004469F4 /* CameraViewController.storyboard */; };
 		24A0AA3D2694595A0081EDBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0AA3C2694595A0081EDBE /* AppDelegate.swift */; };
 		24A0AA3F2694595A0081EDBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0AA3E2694595A0081EDBE /* SceneDelegate.swift */; };
 		24A0AA462694595C0081EDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A0AA452694595C0081EDBE /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		092259F4269474E3004469F4 /* GalleryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
 		092259F5269474E3004469F4 /* GalleryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GalleryViewController.storyboard; sourceTree = "<group>"; };
 		092259F7269474E3004469F4 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		092259FD26949DEB004469F4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		09225A0126949E0C004469F4 /* CameraViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraViewController.storyboard; sourceTree = "<group>"; };
 		24A0AA392694595A0081EDBE /* GalleryProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0AA3C2694595A0081EDBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A0AA3E2694595A0081EDBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		092259FC26949DC7004469F4 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				092259FD26949DEB004469F4 /* CameraViewController.swift */,
+				09225A0126949E0C004469F4 /* CameraViewController.storyboard */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		24A0AA302694595A0081EDBE = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 		24A0AA5226945DBA0081EDBE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				092259FC26949DC7004469F4 /* Camera */,
 				F168F2DE2694930100FE7380 /* Favorite */,
 				F100C5EE2694650F00B153B3 /* MainTabBar */,
 				F100C5E5269463E200B153B3 /* Base */,
@@ -364,6 +378,7 @@
 				24A0AA492694595C0081EDBE /* LaunchScreen.storyboard in Resources */,
 				F100C5F02694652D00B153B3 /* MainTabBar.storyboard in Resources */,
 				24A0AA462694595C0081EDBE /* Assets.xcassets in Resources */,
+				09225A0226949E0C004469F4 /* CameraViewController.storyboard in Resources */,
 				F168F2E9269493C200FE7380 /* FavoriteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +401,7 @@
 				F100C5E92694640200B153B3 /* Storyboarded.swift in Sources */,
 				24A0AA3F2694595A0081EDBE /* SceneDelegate.swift in Sources */,
 				F168F2D02694813D00FE7380 /* GalleryViewModel.swift in Sources */,
+				092259FF26949DEB004469F4 /* CameraViewController.swift in Sources */,
 				F168F2CE2694808500FE7380 /* CollectionView+Extension.swift in Sources */,
 				24A0AA5B269462CF0081EDBE /* FilesManager.swift in Sources */,
 				F168F2CD2694808500FE7380 /* UIColor+Extension.swift in Sources */,
@@ -535,13 +551,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7J4PSQLX;
+				DEVELOPMENT_TEAM = XZ3GM4S56F;
 				INFOPLIST_FILE = "GalleryProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ladotsivtsivadze.GalleryProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ladotsivtsivadze.GalleryProjectt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,13 +570,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C7J4PSQLX;
+				DEVELOPMENT_TEAM = XZ3GM4S56F;
 				INFOPLIST_FILE = "GalleryProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ladotsivtsivadze.GalleryProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ladotsivtsivadze.GalleryProjectt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

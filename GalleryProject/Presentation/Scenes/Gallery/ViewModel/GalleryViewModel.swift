@@ -27,7 +27,7 @@ final class GalleryViewModel: GalleryViewModelProtocol{
         
         let dataPath = docuemntsDirectoryURL.appendingPathComponent("GalleryImages")
         
-        print(dataPath)
+       // print(dataPath)
         
         if !FileManager.default.fileExists(atPath: dataPath.path) {
             do {
